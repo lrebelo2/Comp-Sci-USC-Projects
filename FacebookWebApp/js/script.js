@@ -178,10 +178,10 @@ app.controller("tCtrl", ["$scope", "$http", function ($scope, $http, $location) 
         $("#pBarD1").css("display", "block");
         $("#pBarD2").css("display", "block");
         if (type == "events") {
-            var url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,posts.limit(5)&access_token=EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD";
+            var url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,posts.limit(5)&access_token=";
         }
         else {
-            var url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,albums.limit(5){name,photos.limit(2){name,picture}},posts.limit(5)&access_token=EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD";
+            var url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,albums.limit(5){name,photos.limit(2){name,picture}},posts.limit(5)&access_token=";
         }
         $http.get(url).then(function successD(data) {
             if (data.data.albums) {
@@ -192,7 +192,7 @@ app.controller("tCtrl", ["$scope", "$http", function ($scope, $http, $location) 
                     if (data.data.albums.data[i].photos) {
                         for (j = 0; j < data.data.albums.data[i].photos.data.length; j++) {
                             var pic_id = data.data.albums.data[i].photos.data[j].id;
-                            data.data.albums.data[i].photos.data[j].picture = "https://graph.facebook.com/v2.8/" + pic_id + "/picture?access_token=EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD";
+                            data.data.albums.data[i].photos.data[j].picture = "https://graph.facebook.com/v2.8/" + pic_id + "/picture?access_token=";
                         }
                     }
                     else {

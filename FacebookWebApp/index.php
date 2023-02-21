@@ -2,11 +2,11 @@
    
     require_once __DIR__ . '/php-graph-sdk-5.0.0/src/Facebook/autoload.php';
     $fb = new Facebook\Facebook([
-      'app_id' => '1191416027640633',
-      'app_secret' => '38e4034a7f88f6ac1830c8bb812a7621',
+      'app_id' => 'APP_ID',
+      'app_secret' => 'APP_SECRET',
       'default_graph_version' => 'v2.8',
     ]);
-    #$access_token = "EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD";
+
     $access_token =  $facebook->getAccessToken();
     $fb->setDefaultAccessToken($access_token);
 

@@ -79,7 +79,7 @@ public class AlbumsFragment extends Fragment {
             if(x.getPhotos()!=null) {
                 for (ResponseDetails.DataPhoto y : x.getPhotos().getData()) {
                     String pic_id = y.getId();
-                    photos.add("https://graph.facebook.com/v2.8/" + pic_id + "/picture?access_token=EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD");
+                    photos.add("https://graph.facebook.com/v2.8/" + pic_id + "/picture?access_token=");
                 }
             }else{
                 photos.add("No photos available");

@@ -106,9 +106,9 @@ public class DetailsActivity extends AppCompatActivity implements AlbumsFragment
     public String requestDetails(String id) {
         String url;
         if (type.equalsIgnoreCase("event")) {
-            url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,picture.width(60).height(60),posts.limit(5)&access_token=EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD";
+            url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,picture.width(60).height(60),posts.limit(5)&access_token=";
         } else {
-            url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,picture.width(60).height(60),albums.limit(5){name,photos.limit(2){name,picture}},posts.limit(5)&access_token=EAAQ7likbczkBANXPrjETeKH7uFbkzpGUXuyLl8M3sndbCQsDTqi7wu7gol0DiKtmIuhFRs4Fe4y7HQZAAl9Dfi16zwLADn2kLhh6o33slstxPgP72X4bT5xAYNAZCfSWHcxQ4FG2zukAFr8NkgA6QLv0xzONQZD";
+            url = "https://graph.facebook.com/v2.8/" + id + "?fields=name,picture.width(60).height(60),albums.limit(5){name,photos.limit(2){name,picture}},posts.limit(5)&access_token=";
         }
         HttpGetRequest request = new HttpGetRequest();
         request.execute(url);
